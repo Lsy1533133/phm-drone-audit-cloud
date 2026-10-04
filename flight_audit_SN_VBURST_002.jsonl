@@ -1,0 +1,2 @@
+{"n": 1, "prev": "GENESIS", "hash": "fa1ab6ecaa889ce6", "ts": 1791085688180, "rec": {"rule": "V_SPEED", "level": "WARN", "caliber": "L2物理", "measured": 26.0, "limit": 21.0, "frames_confirmed": 1, "ts": 1791085688180}}
+{"n": 2, "prev": "fa1ab6ecaa889ce6", "hash": "b0f8150df9d5b06c", "ts": 1791085689180, "rec": {"rule": "V_SPEED", "level": "ALERT", "caliber": "L2物理", "measured": 26.0, "limit": 21.0, "frames_confirmed": 2, "ts": 1791085689180}}

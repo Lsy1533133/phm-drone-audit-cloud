@@ -1,0 +1,61 @@
+{
+ "verdict": "PASS",
+ "n_pass": 10,
+ "n_total": 10,
+ "mode": "DJI Cloud API login handshake (stdlib JWT HS256)",
+ "align_source": "dji-sdk/DJI-Cloud-API-Demo LoginController/UserServiceImpl/JwtUtil/HttpResultResponse",
+ "checks": [
+  {
+   "name": "①错误用户名→401 invalid username",
+   "pass": true,
+   "detail": "{'code': 401, 'message': 'invalid username', 'data': None}"
+  },
+  {
+   "name": "②flag不匹配→account type",
+   "pass": true,
+   "detail": "{'code': -1, 'message': 'The account type does not match.', 'data': None}"
+  },
+  {
+   "name": "③错误密码→401 invalid password",
+   "pass": true,
+   "detail": "{'code': 401, 'message': 'invalid password', 'data': None}"
+  },
+  {
+   "name": "④登录成功code=0",
+   "pass": true,
+   "detail": "{'code': 0, 'message': 'success', 'data': {'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2V"
+  },
+  {
+   "name": "④a响应含access_token+mqtt_addr+workspace_id",
+   "pass": true,
+   "detail": "{'mqtt_addr': 'tcp://127.0.0.1:1883', 'workspace_id': 'phm-workspace'}"
+  },
+  {
+   "name": "⑤JWT结构: HS256+官方claims",
+   "pass": true,
+   "detail": "{'iss': 'DJI', 'sub': 'CloudApiSample', 'user_id': 1, 'user_type': 2}"
+  },
+  {
+   "name": "⑤a签名stdlib独立复算通过",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "⑥refresh换发新token且claims保留",
+   "pass": true,
+   "detail": "{'username': 'pilot_demo', 'user_id': 1}"
+  },
+  {
+   "name": "⑧篡改签名→拒绝",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "⑦过期token可续签(官方语义)",
+   "pass": true,
+   "detail": "expired=True"
+  }
+ ],
+ "ts": "2026-10-04 20:19:26",
+ "audit_sha256": "c326a2359b0f1e94bbefd0584a4817bc63a990207908efb7f40694869adfd775"
+}

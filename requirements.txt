@@ -1,0 +1,4 @@
+paho-mqtt>=2.0
+
+# 测试专用(进程内MQTT broker), 运行时不需要:
+amqtt>=0.11

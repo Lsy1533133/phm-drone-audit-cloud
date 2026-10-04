@@ -1,0 +1,81 @@
+{
+ "verdict": "PASS",
+ "n_pass": 14,
+ "n_total": 14,
+ "engine_class": "NullEngine",
+ "mode": "NullEngine passthrough (open package)",
+ "checks": [
+  {
+   "name": "NullEngine降级生效(引擎闭源包缺失)",
+   "pass": true,
+   "detail": "NullEngine"
+  },
+  {
+   "name": "OSD帧计数与模拟源一致",
+   "pass": true,
+   "detail": "delta=30 expect=30"
+  },
+  {
+   "name": "NullEngine零告警透传",
+   "pass": true,
+   "detail": "n_alerts=0"
+  },
+  {
+   "name": "设备事件计数",
+   "pass": true,
+   "detail": "1"
+  },
+  {
+   "name": "设备在线跟踪",
+   "pass": true,
+   "detail": "['SN_PROTO_001']"
+  },
+  {
+   "name": "REST /config降级模式可用",
+   "pass": true,
+   "detail": "{'ok': True, 'sn': 'SN_PROTO_001', 'geofence': {'type': 'circle', 'lat': 22.817, 'lon': 108.366, 'radius_m': 100}, 'profile': None}"
+  },
+  {
+   "name": "事件审计链生成且重算验证通过",
+   "pass": true,
+   "detail": "{'sn': 'SN_PROTO_001', 'ok': True, 'records': 31, 'final_hash': '31f33da90a1b88aa102eb32e2ee848c9e68f0400cee095c5c9621961c7e43e2d', 'anchor_checked': True, 'anchor_match': True}"
+  },
+  {
+   "name": "哈希链_全256位",
+   "pass": true,
+   "detail": "hash_len=64"
+  },
+  {
+   "name": "帧级入链_链记录数≥帧数+事件",
+   "pass": true,
+   "detail": "chain_n=31"
+  },
+  {
+   "name": "头部外锚_锚文件与链尾一致",
+   "pass": true,
+   "detail": "head=31f33da90a1b88aa..."
+  },
+  {
+   "name": "全文件清洗重写_外部锚点戳穿",
+   "pass": true,
+   "detail": "caught=True"
+  },
+  {
+   "name": "哈希链篡改检测生效",
+   "pass": true,
+   "detail": "tampered_ok=False"
+  },
+  {
+   "name": "告警查询为空(NullEngine)",
+   "pass": true,
+   "detail": "n=0"
+  },
+  {
+   "name": "零webhook(无ALERT即无推送)",
+   "pass": true,
+   "detail": "hits=0"
+  }
+ ],
+ "ts": "2026-10-04 20:19:18",
+ "audit_sha256": "1d3be937a9d68439"
+}
