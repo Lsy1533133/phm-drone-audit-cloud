@@ -1,0 +1,101 @@
+[
+ {
+  "file": "/home/z/my-project/phm_cloud_api/realdata/dji_2025.csv",
+  "note": "DJI Neo真实飞行 2025-06-27 (公开导出CSV)",
+  "profile": "mavic",
+  "sn": "NEO-2025-0627",
+  "n_frames": 2198,
+  "indoor_frames_no_gps": 2198,
+  "frames_all_fed_to_engine": true,
+  "n_alerts": 4,
+  "by_rule": {
+   "GPS_LOSS": 2,
+   "BATT_RTH": 2
+  },
+  "by_severity": {
+   "WARN": 2,
+   "ALERT": 2
+  },
+  "peak_hspeed_ms": 1.0,
+  "peak_vspeed_ms": 0.5,
+  "peak_roll_deg": 8.5,
+  "peak_pitch_deg": 13.8,
+  "audit_sha256": "678e00778bc5cefb8748e78b9eb1bdbbdd1d20b171dab8261c8f996cf3d90a13",
+  "ts": "2026-10-05 11:46:17",
+  "alerts_detail": [
+   {
+    "rule": "GPS_LOSS",
+    "level": "WARN",
+    "ts": 0,
+    "measured": 1,
+    "limit": 3,
+    "frames_confirmed": 1
+   },
+   {
+    "rule": "GPS_LOSS",
+    "level": "ALERT",
+    "ts": 100,
+    "measured": 1,
+    "limit": 3,
+    "frames_confirmed": 2
+   },
+   {
+    "rule": "BATT_RTH",
+    "level": "WARN",
+    "ts": 87600,
+    "measured": 30.0,
+    "limit": 30,
+    "frames_confirmed": 1
+   },
+   {
+    "rule": "BATT_RTH",
+    "level": "ALERT",
+    "ts": 87700,
+    "measured": 30.0,
+    "limit": 30,
+    "frames_confirmed": 2
+   }
+  ]
+ },
+ {
+  "file": "/home/z/my-project/phm_cloud_api/realdata/dji_demo2.csv",
+  "note": "DJI真实飞行 demo flight one (公开导出CSV)",
+  "profile": "mavic",
+  "sn": "DJI-DEMO-ONE",
+  "n_frames": 3436,
+  "indoor_frames_no_gps": 0,
+  "frames_all_fed_to_engine": true,
+  "n_alerts": 2,
+  "by_rule": {
+   "BATT_RTH": 2
+  },
+  "by_severity": {
+   "WARN": 1,
+   "ALERT": 1
+  },
+  "peak_hspeed_ms": 8.53,
+  "peak_vspeed_ms": 3.0,
+  "peak_roll_deg": 22.8,
+  "peak_pitch_deg": 34.6,
+  "audit_sha256": "c83e955d3d56aca9eb17ee94c6fdda048fd2b00b46bdc01f65300f7d585f6c14",
+  "ts": "2026-10-05 11:46:18",
+  "alerts_detail": [
+   {
+    "rule": "BATT_RTH",
+    "level": "WARN",
+    "ts": 310100,
+    "measured": 25.0,
+    "limit": 25.0,
+    "frames_confirmed": 1
+   },
+   {
+    "rule": "BATT_RTH",
+    "level": "ALERT",
+    "ts": 310200,
+    "measured": 25.0,
+    "limit": 25.0,
+    "frames_confirmed": 2
+   }
+  ]
+ }
+]
